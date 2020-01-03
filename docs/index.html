@@ -1,0 +1,36 @@
+<!-- 
+Copyright 2019 Adobe
+All Rights Reserved.
+
+NOTICE: Adobe permits you to use, modify, and distribute this file in
+accordance with the terms of the Adobe license agreement accompanying
+it. If you have received this file from a source other than Adobe,
+then your use, modification, or distribution of it requires the prior
+written permission of Adobe. 
+ -->
+
+<HTML>
+    <HEAD> <TITLE>Deep Audio Prior for Blind Sound Source Separation</TITLE> </HEAD>
+    <BODY>
+    
+    <h1>Deep Audio Prior for Sound Source Separation</h1>
+    <p>Yapeng Tian (Summer Intern) and Dingzeyu Li (Research Scientist)<br>
+    Contacts: ytian@adobe.com, dinli@adobe.com 
+    <br>
+    </p>
+    
+    
+    <h2>Overview</h2>
+    <IMG src="dap.png" width="720">
+    <p>We introduce Deep Audio Prior (DAP) to address sound source separation problem <b>without relying on any external training data</b>.
+        <p> <b>Exit talk slides:</b> <a href="exit_talk_Yapeng.pptx">[SLIDES]</a></p>
+        <h2>Comparison to NMF and RPCA methods</h2>
+<table><style> table, th, td {border: 1px solid black;} </style><tr><th>Filename</th><th>Input Mixed Audio</th><th>GroundTruth Audio</th><th>NMF: Predicted Audio</th><th>RPCA: Predicted Audio</th><th>Our method: DAP Predicted Audio</th></tr><tr><td>dog_violin
+        Sound 1</td><td rowspan="2"><img src="res/dog_violin/mixture_amp.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_violin/mixture.wav"></audio></td><td><img src="res/dog_violin/gtamp1.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_violin/gt1.wav"></audio></td><td><img src="res/dog_violin/predamp1_nmf.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_violin/pred1_nmf.wav"></audio></td><td><img src="res/dog_violin/predamp1_rpca.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_violin/pred1_rpca.wav"></audio></td><td><img src="res/dog_violin/predamp1_dap.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_violin/pred1_dap.wav"></audio></td></tr><tr><td>dog_violin
+        Sound 2</td><td><img src="res/dog_violin/gtamp2.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_violin/gt2.wav"></audio></td><td><img src="res/dog_violin/predamp2_nmf.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_violin/pred2_nmf.wav"></audio></td><td><img src="res/dog_violin/predamp2_rpca.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_violin/pred2_rpca.wav"></audio></td><td><img src="res/dog_violin/predamp2_dap.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_violin/pred2_dap.wav"></audio></td></tr><tr><td>basketball_guitar
+Sound 1</td><td rowspan="2"><img src="res/basketball_guitar/mixture_amp.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/basketball_guitar/mixture.wav"></audio></td><td><img src="res/basketball_guitar/gtamp1.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/basketball_guitar/gt1.wav"></audio></td><td><img src="res/basketball_guitar/predamp1_nmf.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/basketball_guitar/pred1_nmf.wav"></audio></td><td><img src="res/basketball_guitar/predamp1_rpca.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/basketball_guitar/pred1_rpca.wav"></audio></td><td><img src="res/basketball_guitar/predamp1_dap.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/basketball_guitar/pred1_dap.wav"></audio></td></tr><tr><td>basketball_guitar
+Sound 2</td><td><img src="res/basketball_guitar/gtamp2.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/basketball_guitar/gt2.wav"></audio></td><td><img src="res/basketball_guitar/predamp2_nmf.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/basketball_guitar/pred2_nmf.wav"></audio></td><td><img src="res/basketball_guitar/predamp2_rpca.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/basketball_guitar/pred2_rpca.wav"></audio></td><td><img src="res/basketball_guitar/predamp2_dap.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/basketball_guitar/pred2_dap.wav"></audio></td></tr><tr><td>dog_speech
+Sound 1</td><td rowspan="2"><img src="res/dog_speech/mixture_amp.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_speech/mixture.wav"></audio></td><td><img src="res/dog_speech/gtamp1.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_speech/gt1.wav"></audio></td><td><img src="res/dog_speech/predamp1_nmf.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_speech/pred1_nmf.wav"></audio></td><td><img src="res/dog_speech/predamp1_rpca.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_speech/pred1_rpca.wav"></audio></td><td><img src="res/dog_speech/predamp1_dap.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_speech/pred1_dap.wav"></audio></td></tr><tr><td>dog_speech
+Sound 2</td><td><img src="res/dog_speech/gtamp2.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_speech/gt2.wav"></audio></td><td><img src="res/dog_speech/predamp2_nmf.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_speech/pred2_nmf.wav"></audio></td><td><img src="res/dog_speech/predamp2_rpca.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_speech/pred2_rpca.wav"></audio></td><td><img src="res/dog_speech/predamp2_dap.jpg" style="max-height:256px;max-width:256px;"><audio controls><source src="res/dog_speech/pred2_dap.wav"></audio></td></tr></table>
+</BODY>
+</HTML>
