@@ -1,7 +1,5 @@
 # Deep Audio Prior - Pytorch Implementation
 
-[Demo](https://git.corp.adobe.com/pages/dinli/AudioVisualLearning/) [Paper](https://openreview.net/pdf?id=B1l1qnEFwH)
-
 Our deep audio prior can enable several audio applications: blind sound source separation, interactive mask-based editing, audio textual synthesis, and audio watermarker removal.
 
 ### Blind source separation
