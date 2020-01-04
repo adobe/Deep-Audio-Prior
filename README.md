@@ -1,5 +1,10 @@
 # Deep Audio Prior - Pytorch Implementation
 
+[Yapeng Tian](http://yapengtian.org/), [Chenliang Xu](https://www.cs.rochester.edu/~cxu22/), and [Dingzeyu Li](http://dingzeyu.li/)
+
+University of Rochester and Adobe Research
+
+
 [[ArXiv]](https://arxiv.org/pdf/1912.10292.pdf)
 [[Demo]](https://opensource.adobe.com/Deep-Audio-Prior/)
 
