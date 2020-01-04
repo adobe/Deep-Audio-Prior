@@ -49,8 +49,9 @@ DAP can also be successfully applied to address audio watermarker removal with c
 
 ### Citation
 
-<pre><code>@InProceedings{dap2019,
+<pre><code>@Article{dap2019,
   author={Yapeng Tian, Chenliang Xu, and Dingzeyu Li},
   title={Deep Audio Prior},
+  booktitle = {ArXiv},
   year = {2019}
 }
