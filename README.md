@@ -56,7 +56,7 @@ DAP can also be successfully applied to address audio watermarker removal with c
  ```
 
 
-### Installing Dependencies
+### Installing dependencies
 
 Use pip installation to install dependencies from requirements.txt 
  ```bash
