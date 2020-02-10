@@ -54,7 +54,15 @@ DAP can also be successfully applied to address audio watermarker removal with c
     $ cd ~/code/
     $ python dap_cosep.py --input1 data/cosep/audiojungle/01.mp3 --input2 data/cosep/audiojungle/02.mp3 --input3 data/cosep/audiojungle/03.mp3 --output output/cosep
  ```
- 
+
+
+### Installing dependencies
+
+Use pip installation to install dependencies from requirements.txt 
+ ```bash
+    $ pip install -r requirements.txt
+ ```
+
 
 ### Citation
 
