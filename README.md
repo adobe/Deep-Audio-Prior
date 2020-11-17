@@ -68,7 +68,7 @@ Use pip installation to install dependencies from requirements.txt
 ### Citation
 
 <pre><code>@Article{dap2019,
-  author={Yapeng Tian, Chenliang Xu, and Dingzeyu Li},
+  author={Tian, Yapeng and Xu, Chenliang and Li, Dingzeyu},
   title={Deep Audio Prior},
   booktitle = {ArXiv},
   year = {2019}
